@@ -1,208 +1,195 @@
-*{
-    margin: 0%;
-}
-body
-{
-  background-color:rgb(255, 255, 255); 
-}      
-.decor
-{
-   display: flex;
-   text-align: center; 
-   text-indent: 50px;
-   font-family: 'Courier New', Courier, monospace;
-   font-weight: bolder;
-   color: rgba(19, 6, 4, 0.943);
-   justify-content: space-between;
-   margin-right: 40px;
-   position: sticky;
-}
-h1
-{
-    font-weight:900;
-}
-nav a
-{
-    color:rgb(8, 4, 4);
-    font-size: larger;
-    justify-content: flex-end; 
-    text-decoration: none;
-    margin-top: 50px;
-}
-a:hover
-{
-    color: rgb(98, 42, 7);
-}
-.logo
-{
-    justify-content: flex-start;
-    margin: auto;
-    margin-left: 0px; 
-    font-weight: bolder;
+/* FOUNDATION */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
 
+:root {
+    --primary: #2f7d32;
+    --primary-light: #81c784;
+    --dark: #121212;
+    --light: #fdfdfd;
+    --glass: rgba(255, 255, 255, 0.7);
+    --transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.display
-{
-  display: flex;         
-  gap: 10px;
-  border-style: ridge ;
-  margin-top: auto;
-  height: 50vh;
-  }
 
-.img1
-{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
-    height: 30vh;           
-    margin: 30px;
-    width: 250px; 
-    border-radius: 12px;
-    transform: rotate(3deg);
+html {
+    scroll-behavior: smooth; /* Smooths the jump between sections */
 }
-.img2
-{
-    height: 30vh;           
-    margin: 30px;
-    width: 250px; 
-    border-radius: 12px;
-    transform: rotate(3deg); 
-}
-.img3
-{
-    height: 30vh; 
-    width: 250px;          
-    margin: 30px;
-    border-radius: 12px;
-    transform: rotate(3deg); 
-}
-.img4
-{
-    height: 30vh; 
-    width: 250px;          
-    margin: 30px;
-    border-radius: 12px;
-    transform: rotate(3deg); 
-}
-header{
-     height: 70vh;
-     
-    background:
-        linear-gradient(rgba(47,125,50,0.8), rgba(109,76,65,0.7)),
-        url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
-    background-size: cover;
-    background-position: center ;
-    
-    color: white;
-    margin: 0px;
-}
-.para
-{
-    text-align: center;
-    font-style:oblique;
-    padding-top: 100px ;
-    text-align: center;
-    margin: auto;
-}
-h2
-{
-    font-size:50px;
-    text-align: center;
-    padding-bottom: 20px;
-    margin-top: 5px;
-}
-.para p
-{
-margin-top: auto;
-}
-.para a
-{
-    margin-top: 12px;
-    display: inline-block;
-    background: #ffffff;
-    color: #2f7d32;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-}
-footer
-{
-    text-align: center;
-    background-color: #2f7d32;
-    padding: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    margin: auto;
-}
-h3
-{
- text-align: center;
- padding: 12px;
- font-display: block;
- font-weight: bolder;
-}
-.contact 
-{
-    text-align: center;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2s-OTp-9-fq3WXzV92yQRg4Sq4_jzYEp74g&s");
-    background-size: cover;
-    padding: 12px;
-   text-indent: 20px;
-   color: rgb(39, 29, 11);
-}
-.email
-{
 
-    text-align: left;
-    padding-left: 300px;
-    text-indent: 20px;
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-.phone
-{
-    text-align: left;
-    padding-left:700px;
-    text-indent: 20px;
-}
-.location
-{
-   text-align: center;
-    text-indent: 20px;
-}
-.about
-{
-    color:rgba(97, 51, 8, 0.932);
-    font-size:50px;
-    text-align: center;
-    padding: 10px;
-    margin: 70px;
-    padding-left: 260px;
-    
-}
-.body1
-{
+
+/*NAVIGATION (Glassmorphism) */
+header {
     display: flex;
-    background-image: url("https://images.unsplash.com/photo-1546146830-2cca9512c68e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHByb2dyYW1taW5nfGVufDB8fDB8fHww");
-    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--glass);
+    backdrop-filter: blur(15px); /* This creates blurry look */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-.pre1
-{
-    text-align: center;
-    color:rgb(0, 0, 0);
-    padding: 30px;
-    padding-bottom: 40px;
-    font-family: 'Times New Roman', Times, serif;
-    text-indent: 10px;
-}
-.logo1
-{
-    text-align: left;
-    padding: 20px ;
-}
-.head1
-{
-   text-align: center;
-   font-size: 30px;
-   padding: 30px;
-   font-family: 'Courier New', Courier, monospace;
 
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.logo span { color: var(--primary); }
+
+nav {
+    display: flex;
+    list-style: none; /* Removes the bullet points */
+    gap: 35px;        /* Equal spacing between each link */
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual Link Styling */
+nav a {
+    text-decoration: none;  /* Removes the default underline */
+    color: #1a1a1a;        /* Sleek dark grey/black */
+    font-size: 0.85rem;     /* Slightly smaller for a premium look */
+    font-weight: 700;       /* Bold text as seen in your screenshot */
+    letter-spacing: 2px;  /* Spaced out letters for a 'tech' feel */
+    text-transform: uppercase; /* Ensures all caps */
+    transition: all 0.3s ease; /* Smooth color transition */
+    position: relative;     /* Required for the underline effect below */
+}
+
+/* Change color when hovering or when on the active page */
+nav a:hover, 
+nav a.active {
+    color: #43a047; /* Green Byte Green */
+}
+
+/* THE DREAMY UNDERLINE EFFECT
+   This creates a small green bar that grows from the center 
+   when you hover over a link.
+*/
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #43a047;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%; /* Grows to full width on hover or active */
+}
+
+/* SCROLL REVEAL ANIMATIONS */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: var(--transition);
+}
+
+.reveal-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. HERO SECTION STYLING */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: radial-gradient(circle at top right, #f0f7f0, #ffffff);
+}
+
+.hero-content h1 {
+    font-size: clamp(40px, 7vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero-content span { color: var(--primary); }
+
+/* 5. DYNAMIC IMAGE GRID (Home Page) */
+.display {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.display img {
+    position: absolute;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    transition: 0.5s ease;
+    object-fit: cover;
+}
+
+.img1 { width: 300px; height: 350px; top: 0; right: 0; z-index: 2; transform: rotate(3deg); }
+.img2 { width: 250px; height: 300px; bottom: 0; left: 0; z-index: 1; transform: rotate(-5deg); }
+
+.display img:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+/* 6. BENTO GRID (For Services/Devices) */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.bento-item {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 40px;
+    padding: 40px;
+    transition: var(--transition);
+}
+
+.bento-item:hover {
+    background: #f4fcf4;
+    border-color: var(--primary-light);
+    transform: translateY(-10px);
+}
+
+/* 7. FOOTER */
+footer {
+    padding: 60px 8%;
+    text-align: center;
+    background: #fafafa;
+    color: #999;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
+
+/* 8. RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .hero { flex-direction: column; text-align: center; padding-top: 120px; }
+    .display { width: 100%; height: 400px; margin-top: 50px; }
+    .bento-grid { grid-template-columns: 1fr; }
 }
